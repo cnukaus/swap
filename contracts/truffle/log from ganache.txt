@@ -1,0 +1,12 @@
+Contract created on ganache: 0x8c08edd16b9253478dae26dfa43bcecfccc846eb
+
+Contract on Rinkeby:
+
+0x73da5a1a26cd7450ee8c676638ff032f1058ba6f1a7f71808afff1d4580b78c7
+
+Trans1
+IPFS Hash # stored on Eth Contract	QmUo3rvNarYhvZ3xGgayPEaDqzvY5cDr3Tp2RZwaHLtSJv
+Ethereum Contract Address	0x249eE6191270C237d36af139BFd16B078337F84A
+Tx Hash # 	0x73da5a1a26cd7450ee8c676638ff032f1058ba6f1a7f71808afff1d4580b78c7
+Block Number # 	3393298
+Gas Used	85964

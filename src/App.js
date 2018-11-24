@@ -2,6 +2,7 @@ import {Table, Grid, Button, Form } from 'react-bootstrap';
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import './background.css'
 import web3 from './web3';
 import ipfs from './ipfs';
 import storehash from './storehash';
@@ -15,7 +16,8 @@ class App extends Component {
       blockNumber:'',
       transactionHash:'',
       gasUsed:'',
-      txReceipt: ''   
+      txReceipt: '',
+      fileNameFound: ''   
     };
    
     captureFile =(event) => {
@@ -24,7 +26,8 @@ class App extends Component {
         const file = event.target.files[0]
         let reader = new window.FileReader()
         reader.readAsArrayBuffer(file)
-        reader.onloadend = () => this.convertToBuffer(reader)    
+        reader.onloadend = () => this.convertToBuffer(reader)
+        this.setState({fileNameFound:file.name})    
       };
 
     convertToBuffer = async(reader) => {
@@ -84,6 +87,13 @@ class App extends Component {
           console.log(transactionHash);
           this.setState({transactionHash});
         }); //storehash 
+
+        storehash.methods.sendFileName(this.state.ipfsHash).send({
+          from: accounts[0] 
+        }, (error, transactionHash) => {
+          console.log(transactionHash);
+          this.setState({transactionHash});
+        }); 
       }) //await ipfs.add 
     }; //onSubmit 
   
