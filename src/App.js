@@ -92,13 +92,13 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
-            <h1> Ethereum and InterPlanetary File System(IPFS) with Create React App</h1>
+            <h1> Catch file, buy/sell here</h1>
           </header>
           
           <hr />
 
         <Grid>
-          <h3> Choose file to send to IPFS </h3>
+          <h3> Choose file to send to Blockchain </h3>
           <Form onSubmit={this.onSubmit}>
             <input 
               type = "file"
