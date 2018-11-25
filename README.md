@@ -1,3 +1,5 @@
 # swap
 file swap
-structure from mcchan1/eth-ipfs, check compabitility with wordpress
+structure from github.com/mcchan1/eth-ipfs
+
+
